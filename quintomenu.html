@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EL FOGÓN DEL GORDO</title>
+  <link rel="stylesheet" href="quintomenu.css">
+</head>
+<body>
+  <header>
+    <img src="logop-01.png" alt="Logo de tu empresa">
+    <h1>EL FOGÓN DEL GORDO</h1>
+  </header>
+  <main>
+    <div class="product-container">
+      <div class="product" onclick="showProductDetails('HAMBURGUESA SENCILLA')">
+        <img src="hamburguesa-01.png" alt="HAMBURGUESA SENCILLA">
+        <p>SENCILLA</p>
+      </div>
+      <div class="product" onclick="showProductDetails('HAMBURGUESA ESPECIAL')">
+        <img src="hamburguesa-01.png" alt="HAMBURGUESA ESPECIAL">
+        <p>ESPECIAL</p>
+      </div>
+      <div class="product" onclick="showProductDetails('HAMBURGUESA SUPER ESPECIAL')">
+        <img src="hamburguesa-01.png" alt="HAMBURGUESA SUPER ESPECIAL">
+        <p>SUPER ESPECIAL</p>
+      </div>
+      <div class="product" onclick="showProductDetails('HAMBURGUESA DE LA CASA')">
+        <img src="hamburguesa-01.png" alt="HAMBURGUESA DE LA CASA">
+        <p>DE LA CASA</p>
+      </div>
+      <div class="product" onclick="showProductDetails('PERRO SENCILLO')">
+        <img src="perros-01.png" alt="PERRO SENCILLO">
+        <p>SENCILLO</p>
+      </div>
+      <div class="product" onclick="showProductDetails('PERRO ESPECIAL')">
+        <img src="perros-01.png" alt="PERRO ESPECIAL">
+        <p>ESPECIAL</p>
+      </div>
+      <div class="product" onclick="showProductDetails('PERRO SUPER ESPECIAL')">
+        <img src="perros-01.png" alt="PERRO SUPER ESPECIAL">
+        <p>SUPER ESPECIAL</p>
+      </div>
+      <div class="product" onclick="showProductDetails('PERRO DE LA CASA')">
+        <img src="perros-01.png" alt="PERRO DE LA CASA">
+        <p>DE LA CASA</p>
+      </div>
+      <div class="product" onclick="showProductDetails('AREPA CON CHORIZO')">
+        <img src="arepacho-01.png" alt="AREPA CON CHORIZO">
+        <p>CON CHORIZO</p>
+      </div>
+      <div class="product" onclick="showProductDetails('AREPA MIXTA')">
+        <img src="arepamix-01.png" alt="AREPA MIXTA">
+        <p>AREPA MIXTA</p>
+      </div>
+      <div class="product" onclick="showProductDetails('AREPA DE LA CASA')">
+        <img src="arepacas-01.png" alt="AREPA DE LA CASA">
+        <p>AREPA DE LA CASA</p>
+      </div>
+      <div class="product" onclick="showProductDetails('PATACON')">
+        <img src="patacon-01.png" alt="PATACON">
+        <p>PATACÓN</p>
+      </div>
+      <div class="product" onclick="showProductDetails('MAZORCADA')">
+        <img src="mazorcada-01-01.png" alt="MAZORCADA">
+        <p>MAZORCADA</p>
+      </div>
+      <div class="product" onclick="showProductDetails('BURROS')">
+        <img src="burritos-01.png" alt="BURROS">
+        <p>BURRITOS</p>
+      </div>
+      <div class="product" onclick="showProductDetails('NACHADAS')">
+        <img src="nachadas-01.png" alt="NACHADAS">
+        <p>NACHADAS</p>
+      </div>
+      <div class="product" onclick="showProductDetails('CHORIPERRO')">
+        <img src="choriperro-01.png" alt="CHORIPERRO">
+        <p>CHORIPERRO</p>
+      </div>
+      <div class="product" onclick="showProductDetails('AREPONA')">
+        <img src="arepona-01.png" alt="AREPONA">
+        <p>AREPONA</p>
+      </div>
+
+      <!-- Repite este patrón para los otros productos -->
+    </div>
+    <a href="bebidasdos.html" class="btn-bebidas">Ver Bebidas</a>
+    <hr class="separator-line">
+
+    <div id="product-details-container" class="hidden">
+      <h2 id="product-name"></h2>
+      <img id="product-image" src="" alt="Producto">
+      <label for="size">Disfrútalo como quieras:</label>
+      <select id="size">
+        <option value="cojin 15 platos" data-price="170,000">cojín 15 platos</option>
+        <option value="cojin 25 platos" data-price="280,000">cojín 25 platos</option>
+        <option value="cojin 30 platos" data-price="330,000">cojín 30 platos</option>
+        <option value="cojin 45 platos" data-price="370,000">cojín 45 platos</option>
+        <option value="cojin 50 platos" data-price="410,000">cojín 50 platos</option>
+        <option value="cojin 60 platos" data-price="450,000">cojín 60 platos</option>
+        <option value="cojin 80 platos" data-price="520,000">cojín 80 platos</option>
+        <option value="cojin 100 platos" data-price="720,000">cojín 100 platos</option>
+      </select>
+      <br>
+      <button onclick="acceptProduct()">Aceptar</button>
+      <button onclick="cancelProduct()">Cancelar</button>
+    </div>
+    <table id="summary-table" class="hidden">
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>El pedido debe venir</th>
+          <th>Valor</th>
+          <th>Pagar Pedido</th>
+          <th>Cancelar Pedido</th>
+        </tr>
+      </thead>
+      <tbody id="summary-table-body">
+        <!-- Aquí se agregarán las filas del resumen -->
+      </tbody>
+    </table>
+  </main>
+
+  <table id="menu-table">
+    <!-- Contenido de la tabla del menú -->
+  </table>
+  <div id="total-price-invoice"></div>
+  <script src="quintomenu.js"></script>
+</body>
+</html>
